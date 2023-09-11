@@ -49,3 +49,21 @@ object Build : BuildType({
         }
     }
 })
+
+object Build : BuildType({
+    name = "Testing"
+    description = "Pipeline for project testing purposes"
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
+    triggers {
+        vcs{
+
+        }
+    }
+    features {
+        perfmon {
+        }
+    }
+})
